@@ -101,8 +101,8 @@ public class Main {
         Arrays.sort(chArrays);
         StringBuilder sb1 = new StringBuilder();
         int count = 0;
-        for (int i = 1; i < chArrays.length; i++) {
-            if (chArrays[i] == chArrays[i - 1] && i < chArrays.length-1) {
+        for (int i = 0; i < chArrays.length; i++) {
+            if (i > 0 && chArrays[i] == chArrays[i - 1] && i < chArrays.length-1) {
                 count++;
             } else if (count >= 1) {
                 sb1.append(chArrays[i - 1]);
